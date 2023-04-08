@@ -17,8 +17,8 @@ class Phone {
   /// [fromMap] factory method that creates a [Phone] from a [Map].
   factory Phone.fromMap(Map<String, dynamic> map) {
     return Phone(
-      ddd: map['ddd'],
-      phone: map['phone'],
+      ddd: map['ddd'] ?? 0,
+      phone: map['phone'] ?? '',
     );
   }
 
