@@ -26,4 +26,7 @@ class City {
   }
 
   String toJson() => jsonEncode(toMap());
+
+  @override
+  String toString() => 'City(id: $id, name: $name)';
 }

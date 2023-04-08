@@ -17,7 +17,7 @@ class Phone {
   /// [fromMap] factory method that creates a [Phone] from a [Map].
   factory Phone.fromMap(Map<String, dynamic> map) {
     return Phone(
-      ddd: map['ddd'] ?? 0,
+      ddd: map['ddd'] ?? '',
       phone: map['phone'] ?? '',
     );
   }
@@ -26,7 +26,7 @@ class Phone {
   factory Phone.fromJson(String json) => Phone.fromMap(jsonDecode(json));
 
   /// ddd is a [int] that represents the phone's ddd.
-  final int ddd;
+  final String ddd;
 
   /// phone is a [String] that represents the phone's number.
   final String phone;
@@ -41,4 +41,8 @@ class Phone {
 
   /// [toJson] method that converts a [Phone] to a JSON [String].
   String toJson() => jsonEncode(toMap());
+
+  /// [toString] method that returns a [String] representation of a [Phone].
+  @override
+  String toString() => 'Phone(ddd: $ddd, phone: $phone)';
 }

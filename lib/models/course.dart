@@ -3,7 +3,7 @@ import 'dart:convert';
 class Course {
   Course({
     required this.id,
-    required this.name,
+    required this.title,
     required this.description,
     required this.isStudent,
   });
@@ -11,7 +11,7 @@ class Course {
   factory Course.fromMap(Map<String, dynamic> map) {
     return Course(
       id: map['id'] ?? 0,
-      name: map['name'] ?? '',
+      title: map['title'] ?? '',
       description: map['description'] ?? '',
       isStudent: map['is_active'] ?? false,
     );
@@ -20,18 +20,23 @@ class Course {
   factory Course.fromJson(String json) => Course.fromMap(jsonDecode(json));
 
   final int id;
-  final String name;
+  final String title;
   final String description;
   final bool isStudent;
 
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'name': name,
+      'title': title,
       'description': description,
       'is_active': isStudent,
     };
   }
 
   String toJson() => jsonEncode(toMap());
+
+  @override
+  String toString() {
+    return 'Course(id: $id, title: $title, description: $description, isStudent: $isStudent)';
+  }
 }

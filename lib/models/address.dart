@@ -41,4 +41,9 @@ class Address {
   }
 
   String toJson() => jsonEncode(toMap());
+
+  @override
+  String toString() {
+    return 'Address(street: $street, number: $number, cep: $cep, city: $city, phone: $phone)';
+  }
 }

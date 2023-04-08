@@ -51,4 +51,9 @@ class Student {
   }
 
   String toJson() => jsonEncode(toMap());
+
+  @override
+  String toString() {
+    return 'Student(id: $id, name: $name, age: $age, nameCourses: $nameCourses, courses: $courses, address: $address)';
+  }
 }
