@@ -1,0 +1,134 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Felipe Sales",
+            "email": "soufeliposales@gmail.com",
+            "password": "123"
+        },
+        {
+            "id": 1,
+            "name": "Italo",
+            "email": "italo@gmail.com",
+            "password": "1234"
+        }
+    ],
+    "adm_users": [
+        {
+            "id": 1,
+            "name": "Felipe Sales",
+            "email": "soufeliposales@gmail.com",
+            "password": "123",
+            "profile": "ADMIN"
+        },
+        {
+            "id": 2,
+            "name": "Italo",
+            "email": "italo@gmail.com",
+            "password": "1234",
+            "profile": "SUPORTE"
+        }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "title": "Máquina de Execução"
+        },
+        {
+            "id": 1,
+            "title": "Independência"
+        },
+        {
+            "id": 2,
+            "title": "Decisão"
+        }
+    ],
+    "students": [
+        {
+            "id": 0,
+            "name": "Felipe Sales",
+            "age": 19,
+            "courses_names": [
+                "Máquina de Execução",
+                "Independência",
+                "Decisão"
+            ],
+            "courses": [
+                {
+                    "id": 0,
+                    "title": "Máquina de Execução",
+                    "description": "Máquina de execução para ser mais produtivo.",
+                    "is_active": true
+                },
+                {
+                    "id": 1,
+                    "title": "Independência",
+                    "description": "Busque a Independência",
+                    "is_active": true
+                },
+                {
+                    "id": 2,
+                    "title": "Decisão",
+                    "description": "Decisão é a chave para o sucesso.",
+                    "is_active": true
+                }
+            ],
+            "address": {
+                "street": "Rua 1",
+                "number": 327,
+                "CEP": "62500000",
+                "city": {
+                    "id": 0,
+                    "name": "Uruburetama"
+                },
+                "phone": {
+                    "ddd": "85",
+                    "number": "999999999"
+                }
+            }
+        },
+        {
+            "id": 1,
+            "name": "Italo",
+            "age": 19,
+            "courses_names": [
+                "Máquina de Execução",
+                "Independência",
+                "Decisão"
+            ],
+            "courses": [
+                {
+                    "id": 0,
+                    "title": "Máquina de Execução",
+                    "description": "Máquina de execução para ser mais produtivo.",
+                    "is_active": false
+                },
+                {
+                    "id": 1,
+                    "title": "Independência",
+                    "description": "Busque a Independência",
+                    "is_active": false
+                },
+                {
+                    "id": 2,
+                    "title": "Decisão",
+                    "description": "Decisão é a chave para o sucesso.",
+                    "is_active": false
+                }
+            ],
+            "address": {
+                "street": "Rua 1",
+                "number": 327,
+                "CEP": "62500000",
+                "city": {
+                    "id": 0,
+                    "name": "Uruburetama"
+                },
+                "phone": {
+                    "ddd": "85",
+                    "number": "999999999"
+                }
+            }
+        }
+    ]
+}
