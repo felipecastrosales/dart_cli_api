@@ -90,7 +90,6 @@
         {
             "id": 1,
             "name": "Italo",
-            "age": 19,
             "courses_names": [
                 "Máquina de Execução",
                 "Independência",
