@@ -1,7 +1,7 @@
-## Dart API Consume Example
+# Dart API Consume Example
 
 This is a simple example of how to consume a REST API using Dart.
-### About 
+## About 
 
 API Consume Example using Dart. 
 
@@ -60,7 +60,7 @@ class Phone {
 ```
 
 
-### How to run
+## How to run
 
 - Basic configuration
 
