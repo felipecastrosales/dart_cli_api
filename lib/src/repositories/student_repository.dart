@@ -35,4 +35,42 @@ class StudentRepository {
 
     return Student.fromJson(studentResponse.body);
   }
+
+  Future<Student> insert(Student student) async {
+    final studentResponse = await http.post(
+      Uri.parse('http://localhost:7777/students'),
+      body: student.toJson(),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    );
+
+    if (studentResponse.statusCode != 200) {
+      throw Exception('Failed to insert student');
+    }
+
+    return Student.fromJson(studentResponse.body);
+  }
+
+  Future<Student> update(Student student) async {
+    final studentResponse = await http.put(
+      Uri.parse('http://localhost:7777/students/${student.id}'),
+      body: student.toJson(),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    );
+
+    if (studentResponse.statusCode != 200) {
+      throw Exception('Failed to update student');
+    }
+
+    return Student.fromJson(studentResponse.body);
+  }
+
+  Future<void> deleteById(int id) async {
+    await http.delete(
+      Uri.parse('http://localhost:7777/students/$id'),
+    );
+  }
 }
