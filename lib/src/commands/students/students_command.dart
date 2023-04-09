@@ -1,4 +1,5 @@
 import 'package:args/command_runner.dart';
+import 'package:dart_api_v2/src/commands/students/subcommands/find_by_id.dart';
 
 import '../../repositories/student_repository.dart';
 
@@ -14,5 +15,6 @@ class StudentsCommand extends Command {
   StudentsCommand() {
     final studentRepository = StudentRepository();
     addSubcommand(FindAllCommand(studentRepository));
+    addSubcommand(FindById(studentRepository));
   }
 }
