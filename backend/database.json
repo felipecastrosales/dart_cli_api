@@ -58,25 +58,25 @@
                     "id": 0,
                     "title": "Máquina de Execução",
                     "description": "Máquina de execução para ser mais produtivo.",
-                    "is_active": true
+                    "isStudent": true
                 },
                 {
                     "id": 1,
                     "title": "Independência",
                     "description": "Busque a Independência",
-                    "is_active": true
+                    "isStudent": true
                 },
                 {
                     "id": 2,
                     "title": "Decisão",
                     "description": "Decisão é a chave para o sucesso.",
-                    "is_active": true
+                    "isStudent": true
                 }
             ],
             "address": {
                 "street": "Rua 1",
                 "number": 327,
-                "CEP": "62500000",
+                "zipCode": "62500000",
                 "city": {
                     "id": 0,
                     "name": "Uruburetama"
@@ -100,25 +100,25 @@
                     "id": 0,
                     "title": "Máquina de Execução",
                     "description": "Máquina de execução para ser mais produtivo.",
-                    "is_active": false
+                    "isStudent": false
                 },
                 {
                     "id": 1,
                     "title": "Independência",
                     "description": "Busque a Independência",
-                    "is_active": false
+                    "isStudent": false
                 },
                 {
                     "id": 2,
                     "title": "Decisão",
                     "description": "Decisão é a chave para o sucesso.",
-                    "is_active": false
+                    "isStudent": false
                 }
             ],
             "address": {
                 "street": "Rua 1",
                 "number": 327,
-                "CEP": "62500000",
+                "zipCode": "62500000",
                 "city": {
                     "id": 0,
                     "name": "Uruburetama"

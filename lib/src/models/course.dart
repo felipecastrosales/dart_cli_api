@@ -13,7 +13,7 @@ class Course {
       id: map['id'] ?? 0,
       title: map['title'] ?? '',
       description: map['description'] ?? '',
-      isStudent: map['is_active'] ?? false,
+      isStudent: map['isStudent'] ?? false,
     );
   }
 
@@ -29,7 +29,7 @@ class Course {
       'id': id,
       'title': title,
       'description': description,
-      'is_active': isStudent,
+      'isStudent': isStudent,
     };
   }
 

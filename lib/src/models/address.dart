@@ -7,7 +7,7 @@ class Address {
   Address({
     required this.street,
     required this.number,
-    required this.cep,
+    required this.zipCode,
     required this.city,
     required this.phone,
   });
@@ -16,7 +16,7 @@ class Address {
     return Address(
       street: map['street'] ?? '',
       number: map['number'] ?? 0,
-      cep: map['CEP'] ?? '',
+      zipCode: map['zipCode'] ?? '',
       city: City.fromMap(map['city'] ?? {}),
       phone: Phone.fromMap(map['phone'] ?? {}),
     );
@@ -26,7 +26,7 @@ class Address {
 
   final String street;
   final int number;
-  final String cep;
+  final String zipCode;
   final City city;
   final Phone phone;
 
@@ -34,7 +34,7 @@ class Address {
     return {
       'street': street,
       'number': number,
-      'CEP': cep,
+      'zipCode': zipCode,
       'city': city.toMap(),
       'phone': phone.toMap(),
     };
@@ -44,6 +44,6 @@ class Address {
 
   @override
   String toString() {
-    return 'Address(street: $street, number: $number, cep: $cep, city: $city, phone: $phone)';
+    return 'Address(street: $street, number: $number, zipCode: $zipCode, city: $city, phone: $phone)';
   }
 }
