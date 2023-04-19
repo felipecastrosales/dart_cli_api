@@ -7,7 +7,7 @@ import '../models/course.dart';
 class CourseRepository {
   Future<Course> findByName(String name) async {
     final response = await http.get(
-      Uri.parse('localhost:7777/products?name=$name'),
+      Uri.parse('http://localhost:7777/products?title=$name'),
     );
 
     if (response.statusCode != 200) {
@@ -20,6 +20,6 @@ class CourseRepository {
       throw Exception('Course not found');
     }
 
-    return Course.fromMap(responseData[0]);
+    return Course.fromMap(responseData.first);
   }
 }

@@ -19,10 +19,10 @@ class Course {
 
   factory Course.fromJson(String json) => Course.fromMap(jsonDecode(json));
 
-  final int id;
-  final String title;
-  final String description;
-  final bool isStudent;
+  int id;
+  String title;
+  String description;
+  bool isStudent;
 
   Map<String, dynamic> toMap() {
     return {
