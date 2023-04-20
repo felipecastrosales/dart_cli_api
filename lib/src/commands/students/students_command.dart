@@ -1,6 +1,6 @@
 import 'package:args/command_runner.dart';
 
-import '../../repositories/student_repository.dart';
+import '../../repositories/student_repository_dio.dart';
 
 import 'subcommands/delete_command.dart';
 import 'subcommands/find_all_command.dart';
@@ -16,7 +16,7 @@ class StudentsCommand extends Command {
   String get name => 'students';
 
   StudentsCommand() {
-    final studentRepository = StudentRepository();
+    final studentRepository = StudentRepositoryDio();
     addSubcommand(FindAllCommand(studentRepository));
     addSubcommand(FindById(studentRepository));
     addSubcommand(InsertCommand(studentRepository));

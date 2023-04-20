@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:args/command_runner.dart';
-import '../../../repositories/course_repository.dart';
-import '../../../repositories/student_repository.dart';
+import '../../../repositories/course_repository_dio.dart';
+import '../../../repositories/student_repository_dio.dart';
 
 class DeleteCommand extends Command {
   DeleteCommand(this.repository) {
@@ -14,8 +14,11 @@ class DeleteCommand extends Command {
     );
   }
 
-  final StudentRepository repository;
-  final courseRepository = CourseRepository();
+  // final StudentRepository repository;
+  // final courseRepository = CourseRepository();
+
+  final StudentRepositoryDio repository;
+  final courseRepository = CourseRepositoryDio();
 
   @override
   String get description => 'Delete a student';

@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:args/command_runner.dart';
+import '../../../repositories/course_repository_dio.dart';
+import '../../../repositories/student_repository_dio.dart';
 import '../../../models/phone.dart';
 import '../../../models/city.dart';
 import '../../../models/address.dart';
 import '../../../models/student.dart';
-import '../../../repositories/course_repository.dart';
-import '../../../repositories/student_repository.dart';
 
 class InsertCommand extends Command {
   InsertCommand(this.repository) {
@@ -18,8 +18,8 @@ class InsertCommand extends Command {
     );
   }
 
-  final StudentRepository repository;
-  final courseRepository = CourseRepository();
+  final StudentRepositoryDio repository;
+  final courseRepository = CourseRepositoryDio();
 
   @override
   String get description => 'Insert a student';

@@ -1,6 +1,5 @@
 import 'package:args/command_runner.dart';
-
-import '../../../repositories/student_repository.dart';
+import '../../../repositories/student_repository_dio.dart';
 
 class FindById extends Command {
   FindById(this.repository) {
@@ -11,7 +10,8 @@ class FindById extends Command {
       valueHelp: 'id',
     );
   }
-  final StudentRepository repository;
+
+  final StudentRepositoryDio repository;
 
   @override
   String get description => 'Find a student by id';

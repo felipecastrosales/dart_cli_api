@@ -1,12 +1,11 @@
 import 'dart:io';
 
 import 'package:args/command_runner.dart';
-
-import '../../../repositories/student_repository.dart';
+import '../../../repositories/student_repository_dio.dart';
 
 class FindAllCommand extends Command {
   FindAllCommand(this.repository);
-  final StudentRepository repository;
+  final StudentRepositoryDio repository;
 
   @override
   String get description => 'Find all students';
