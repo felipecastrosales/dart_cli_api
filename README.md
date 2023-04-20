@@ -1,6 +1,7 @@
 # Dart API Consume Example
 
 This is a simple example of how to consume a REST API using Dart.
+
 ## About 
 
 API Consume Example using Dart. 
@@ -65,8 +66,8 @@ class Phone {
 - Basic configuration
 
 ```
-$ git clone https://github.com/felipecastrosales/dart_api_v2
-$ cd dart_api_v2
+$ git clone https://github.com/felipecastrosales/dart_cli_api
+$ cd dart_cli_api
 $ code .
 $ dart pub get
 $ cd backend
@@ -83,5 +84,5 @@ $ json_rest_server run
 - Run the frontend
 ```
 $ cd ..
-$ dart run lib/dart_api_v2.dart
+$ dart run lib/dart_cli_api.dart
 ```
