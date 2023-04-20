@@ -18,7 +18,7 @@ class FindAllCommand extends Command {
   Future<void> run() async {
     print('Finding all students...');
     final students = await repository.findAll();
-    print('Present courses? (Y or N)');
+    print('Present courses? (y/n)');
     final showCourses = stdin.readLineSync();
     print('------------------------------------------------------------------');
     print('Students:');
