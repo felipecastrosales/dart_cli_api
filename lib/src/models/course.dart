@@ -13,7 +13,7 @@ class Course {
       id: map['id'] ?? 0,
       title: map['title'] ?? '',
       description: map['description'] ?? '',
-      isStudent: map['isStudent'] ?? false,
+      isStudent: map['is_student'] ?? false,
     );
   }
 
@@ -29,7 +29,7 @@ class Course {
       'id': id,
       'title': title,
       'description': description,
-      'isStudent': isStudent,
+      'is_student': isStudent,
     };
   }
 
@@ -37,6 +37,6 @@ class Course {
 
   @override
   String toString() {
-    return 'Course(id: $id, title: $title, description: $description, isStudent: $isStudent)';
+    return 'Course(id: $id, title: $title, description: $description, is_student: $isStudent)';
   }
 }

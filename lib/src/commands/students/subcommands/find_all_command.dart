@@ -25,7 +25,7 @@ class FindAllCommand extends Command {
     for (var student in students) {
       if (showCourses?.toLowerCase() == 'y') {
         print(
-          'Id: ${student.id}, Name: ${student.name}, Courses: ${student.courses.where((course) => course.isStudent).map((course) => course.title).toList()}',
+          'Id: ${student.id}, Name: ${student.name}, courses: ${student.courses.where((course) => course.isStudent).map((course) => course.title).join(', ')}',
         );
       } else {
         print('Id: ${student.id}, Name: ${student.name}');

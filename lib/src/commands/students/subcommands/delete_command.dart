@@ -41,20 +41,20 @@ class DeleteCommand extends Command {
 
     final studentData = await repository.findById(id);
     print(
-        'You confirm the deletion of the student: ${studentData.name}? (y/n)');
+        'You confirm the deletion of the student with id $id and name ${studentData.name}? (y/n)');
     final confirmDelete = stdin.readLineSync();
     if (confirmDelete?.toLowerCase() == 'y') {
       print(
         '------------------------------------------------------------------',
       );
       await repository.deleteById(id);
-      print('Student ${studentData.name} deleted!');
+      print('Student ${studentData.name} with id: $id deleted!');
       return;
     } else {
       print(
         '------------------------------------------------------------------',
       );
-      print('Student ${studentData.name} not deleted!');
+      print('Student ${studentData.name} with id: $id not deleted!');
       return;
     }
   }

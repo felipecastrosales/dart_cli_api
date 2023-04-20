@@ -1,10 +1,12 @@
-# Dart API Consume Example
+# Dart CLI & API Example
 
-This is a simple example of how to consume a REST API using Dart.
+This is a simple example of how to consume a REST API and how build a CLI using Dart.
 
 ## About 
 
-API Consume Example using Dart. 
+API Consume and CLI Example using Dart. 
+
+## API Consume
 
 See the data modeling example with documentation (explaining the complete code). 
 
@@ -57,9 +59,37 @@ class Phone {
   @override
   String toString() => 'Phone(ddd: $ddd, phone: $phone)';
 }
-
 ```
 
+## CLI
+
+See the CLI example commands:
+
+- Help: 
+
+  `dart ./bin/dart_cli.dart -h`
+
+- Find all:
+
+  `dart ./bin/dart_cli.dart students findAll`
+
+- Find by id:
+
+  `dart ./bin/dart_cli.dart students findById -i 1`
+
+- Insert:
+
+  `dart ./bin/dart_cli.dart students insert -f ./students.csv`
+
+- Update:
+
+  `dart ./bin/dart_cli.dart students update -f ./students_update.csv -i 3`
+
+- Delete:
+
+  `dart ./bin/dart_cli.dart students delete -i 3`
+
+To debug the CLI, see the [launch.json](.vscode/launch.json).
 
 ## How to run
 
