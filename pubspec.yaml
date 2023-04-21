@@ -1,12 +1,13 @@
-name: dart_api_v2
+name: dart_cli_api
 description: A sample command-line application.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+version: 2.0.0
 
 environment:
   sdk: '>=2.19.4 <3.0.0'
 
 dependencies:
+  args: ^2.4.0
+  dio: ^5.1.1
   http: ^0.13.5
 
 dev_dependencies:

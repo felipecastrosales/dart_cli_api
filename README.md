@@ -1,9 +1,12 @@
-# Dart API Consume Example
+# Dart CLI & API Example
 
-This is a simple example of how to consume a REST API using Dart.
+This is a simple example of how to consume a REST API and how build a CLI using Dart.
+
 ## About 
 
-API Consume Example using Dart. 
+API Consume and CLI Example using Dart. 
+
+## API Consume
 
 See the data modeling example with documentation (explaining the complete code). 
 
@@ -56,17 +59,45 @@ class Phone {
   @override
   String toString() => 'Phone(ddd: $ddd, phone: $phone)';
 }
-
 ```
 
+## CLI
+
+See the CLI example commands:
+
+- Help: 
+
+  `dart ./bin/dart_cli.dart -h`
+
+- Find all:
+
+  `dart ./bin/dart_cli.dart students findAll`
+
+- Find by id:
+
+  `dart ./bin/dart_cli.dart students findById -i 1`
+
+- Insert:
+
+  `dart ./bin/dart_cli.dart students insert -f ./students.csv`
+
+- Update:
+
+  `dart ./bin/dart_cli.dart students update -f ./students_update.csv -i 3`
+
+- Delete:
+
+  `dart ./bin/dart_cli.dart students delete -i 3`
+
+To debug the CLI, see the [launch.json](.vscode/launch.json).
 
 ## How to run
 
 - Basic configuration
 
 ```
-$ git clone https://github.com/felipecastrosales/dart_api_v2
-$ cd dart_api_v2
+$ git clone https://github.com/felipecastrosales/dart_cli_api
+$ cd dart_cli_api
 $ code .
 $ dart pub get
 $ cd backend
@@ -83,5 +114,5 @@ $ json_rest_server run
 - Run the frontend
 ```
 $ cd ..
-$ dart run lib/dart_api_v2.dart
+$ dart run lib/dart_cli_api.dart
 ```

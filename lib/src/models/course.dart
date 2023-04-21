@@ -13,23 +13,23 @@ class Course {
       id: map['id'] ?? 0,
       title: map['title'] ?? '',
       description: map['description'] ?? '',
-      isStudent: map['is_active'] ?? false,
+      isStudent: map['is_student'] ?? false,
     );
   }
 
   factory Course.fromJson(String json) => Course.fromMap(jsonDecode(json));
 
-  final int id;
-  final String title;
-  final String description;
-  final bool isStudent;
+  int id;
+  String title;
+  String description;
+  bool isStudent;
 
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'title': title,
       'description': description,
-      'is_active': isStudent,
+      'is_student': isStudent,
     };
   }
 
@@ -37,6 +37,6 @@ class Course {
 
   @override
   String toString() {
-    return 'Course(id: $id, title: $title, description: $description, isStudent: $isStudent)';
+    return 'Course(id: $id, title: $title, description: $description, is_student: $isStudent)';
   }
 }

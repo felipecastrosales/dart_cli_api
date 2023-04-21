@@ -5,7 +5,7 @@ import 'course.dart';
 
 class Student {
   Student({
-    required this.id,
+    this.id,
     required this.name,
     this.age,
     required this.nameCourses,
@@ -29,7 +29,7 @@ class Student {
 
   factory Student.fromJson(String json) => Student.fromMap(jsonDecode(json));
 
-  final int id;
+  final int? id;
   final String name;
   final int? age;
   final List<String> nameCourses;
